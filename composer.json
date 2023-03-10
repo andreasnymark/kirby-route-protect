@@ -1,0 +1,14 @@
+{
+	"name": "andreasnymark/kirby-route-protect",
+	"description": "Protect panel user from creating page in conflict with routes.",
+  "homepage": "https://github.com/andreasnymark/kirby-route-protect",
+	"version": "0.0.1",
+	"license": "MIT",
+  "type": "kirby-plugin",
+	"authors": [
+		{
+			"name": "Andreas Nymark",
+			"email": "andreas@nymark.co"
+		}
+	]
+}
