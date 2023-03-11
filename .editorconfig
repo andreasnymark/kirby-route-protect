@@ -1,0 +1,19 @@
+[*.{css,scss,less,js,json,ts,sass,html,hbs,mustache,phtml,php,html.twig,md}]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+indent_size = 4
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
+indent_style = space
+
+[package.json,.{babelrc,editorconfig,eslintrc,lintstagedrc,stylelintrc}]
+indent_style = space
+indent_size = 2
