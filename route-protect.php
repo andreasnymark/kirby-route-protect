@@ -5,7 +5,7 @@ $protected = [];
 $check = '';
 
 // make sure user provides slugs as array
-if ( gettype( $userProtected ) != 'array' ) throw new Exception( 'Protected route names needs to be in an array.' );
+if ( gettype( $userProtected ) != 'array' ) throw new Exception( t( 'andreasnymark.kirby-route-protect.array', 'Protected route names needs to be in an array.' ) );
 
 // setup check var depending on hook event
 switch ( $event ) {
@@ -42,7 +42,7 @@ $protected = array_values( array_unique( array_merge( $userProtected, $protected
 // and throw error if it’s a match
 foreach ( $protected as $item ) {
 	if ( $check == $item ) {
-		throw new Exception( 'The URL-appendix is protected.' );
+		throw new Exception( t( 'andreasnymark.kirby-route-protect.protected', 'The URL-appendix is protected.' ) );
 	}
 }
 

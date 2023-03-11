@@ -2,7 +2,7 @@
 	"name": "andreasnymark/kirby-route-protect",
 	"description": "Protect panel user from creating page URL in conflict with routes.",
 	"homepage": "https://github.com/andreasnymark/kirby-route-protect",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"license": "MIT",
 	"type": "kirby-plugin",
 	"authors": [
