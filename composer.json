@@ -1,14 +1,17 @@
 {
 	"name": "andreasnymark/kirby-route-protect",
-	"description": "Protect panel user from creating page in conflict with routes.",
-  "homepage": "https://github.com/andreasnymark/kirby-route-protect",
-	"version": "0.0.1",
+	"description": "Protect panel user from creating page URL in conflict with routes.",
+	"homepage": "https://github.com/andreasnymark/kirby-route-protect",
+	"version": "0.0.2",
 	"license": "MIT",
-  "type": "kirby-plugin",
+	"type": "kirby-plugin",
 	"authors": [
 		{
 			"name": "Andreas Nymark",
 			"email": "andreas@nymark.co"
 		}
-	]
+	],
+	"require": {
+		"getkirby/composer-installer": "^1.1"
+	}
 }
