@@ -1,6 +1,6 @@
 <?php
 
-$userProtected = option( 'andreasnymark.kirby-route-protect.slugs' );
+$userProtected = option( 'andreasnymark.kirby-route-protect.slugs' ) ?? [];
 $protected = [];
 $check = '';
 
