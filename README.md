@@ -21,8 +21,7 @@ Download and copy this repository to `/site/plugins/kirby-route-protect`.
 The plugin automatically picks all routes in the project, both custom and Kirby routes. You can add your own in **site/config/config.php**
 
 	return [
-		'andreasnymark' => [
-			'kirby-route-protect' => [
+		'andreasnymark.kirby-route-protect' => [
 				'slugs' => [ 'protected-slug', 'another-protected-slug' ],
 			],
 		]
