@@ -1,6 +1,6 @@
 <?php
 
-$userProtected = option( 'andreasnymark.kirby-route-protect.slugs' ) ?? [];
+$userProtected = kirby()->option( 'andreasnymark.kirby-route-protect.slugs' ) ?? [];
 $protected = [];
 $check = '';
 
@@ -42,7 +42,7 @@ $protected = array_values( array_unique( array_merge( $userProtected, $protected
 // and throw error if it’s a match
 foreach ( $protected as $item ) {
 	if ( $check == $item ) {
-		throw new Exception( t( 'andreasnymark.kirby-route-protect.protected', 'The URL-appendix is protected.' ) );
+		throw new Exception( t( 'andreasnymark.kirby-route-protect.protected', 'The URL-appendix is protected or already in use.' ) );
 	}
 }
 

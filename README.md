@@ -1,10 +1,10 @@
 ![Kirby Route Protect](kirby-route-protect.png)
 
-# Kirby 3 Route Protect plugin
+# Kirby Route Protect plugin
 
-A [Kirby 3](https://getkirby.com) plugin, protecting panel user from creating page URL in conflict with routes.
+A [Kirby](https://getkirby.com) plugin, protecting panel user from creating page URL in conflict with routes.
 
-**Version tested:** 3.9.0
+**Version tested:** 3.9.0, 4.0.1
 
 ## Installation
 
