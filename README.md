@@ -4,7 +4,7 @@
 
 A [Kirby](https://getkirby.com) plugin, protecting panel user from creating page URL in conflict with routes.
 
-**Version tested:** 3.9.0, 4.0.1
+**Version tested:** 3.9.0, 4.0.1, 5.0.0-beta.4
 
 ## Installation
 
