@@ -14,7 +14,7 @@ switch ( $event ) {
 		if ( count( $parts ) > 1 ) {
 			// remove last word, adding new slug
 			array_pop( $parts );
-			$check = implode( '/', $parts ) . $slug;
+			$check = A::join( $parts, '/' ) . $slug;
 		} else {
 			$check = $slug;
 		}
@@ -24,24 +24,30 @@ switch ( $event ) {
 		break;
 }
 
-// loop through all existing routes, pick
-// first word and add to array
+// loop through all existing routes and store full patterns
 foreach ( kirby()->routes() as $route ) {
 	$pattern = $route[ 'pattern' ];
-	$patternArray = array_values( array_filter( explode( '/', $pattern ), 'strlen' ) );
+	$patternArray = Str::split( $pattern, '/' );
 
 	// avoiding empty arrays
 	if ( count( $patternArray ) > 0 ) {
-		$protected[] = $patternArray[ 0 ];
+		$protected[] = A::join( $patternArray, '/' );
 	}
 }
-// merge, keep unique, and remove empty
-$protected = array_values( array_unique( array_merge( $userProtected, $protected ) ) );
 
-// loop through all routes + user protected
-// and throw error if it’s a match
-foreach ( $protected as $item ) {
-	if ( $check == $item ) {
+// merge, keep unique, and remove empty
+$protected = array_values( array_unique( A::merge( $userProtected, $protected ) ) );
+
+// break down the check path into all levels
+$checkParts = Str::split( $check, '/' );
+$levelsToCheck = [];
+for ( $i = 0; $i < count( $checkParts ); $i++ ) {
+	$levelsToCheck[] = A::join( A::slice( $checkParts, 0, $i + 1 ), '/' );
+}
+
+// check each level against protected routes
+foreach ( $levelsToCheck as $level ) {
+	if ( in_array( $level, $protected ) ) {
 		throw new Exception( t( 'andreasnymark.kirby-route-protect.protected', 'The URL-appendix is protected or already in use.' ) );
 	}
 }
