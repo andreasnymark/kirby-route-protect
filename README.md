@@ -2,7 +2,7 @@
 
 # Kirby Route Protect plugin
 
-A [Kirby](https://getkirby.com) plugin, protecting panel user from creating page URL in conflict with routes.
+A [Kirby](https://getkirby.com) plugin, protecting panel user from creating page URL in conflict with routes and existing folders.
 
 **Version tested:** 3.9.0, 4.0.1, 5.0.4
 
@@ -26,6 +26,8 @@ The plugin automatically picks all routes in the project, both custom and Kirby 
 			],
 		]
 	];
+	
+As of `v1.2.0`, the plugin also checks for existing folders.
 
 
 ## Disclaimer

@@ -12,6 +12,7 @@ Kirby::plugin( 'andreasnymark/kirby-route-protect', [
 		'en' => [
 			'andreasnymark.kirby-route-protect.array' => 'Protected route names needs to be in an array.',
 			'andreasnymark.kirby-route-protect.protected' => 'The URL-appendix is protected or already in use.',
+			'andreasnymark.kirby-route-protect.exists' => 'A folder already exists at this URL.',
 		],
 	],
 ]);

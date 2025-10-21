@@ -24,6 +24,12 @@ switch ( $event ) {
 		break;
 }
 
+// check if a folder exists at this path
+$folderPath = kirby()->root( 'index' ) . '/' . $check;
+if ( Dir::exists( $folderPath ) ) {
+	throw new Exception( t( 'andreasnymark.kirby-route-protect.exists', 'A folder already exists at this URL.' ) );
+}
+
 // loop through all existing routes and store full patterns
 foreach ( kirby()->routes() as $route ) {
 	$pattern = $route[ 'pattern' ];
